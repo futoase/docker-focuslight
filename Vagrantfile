@@ -105,11 +105,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.network :private_network, ip: "192.168.33.100"
 
-  if !PULL_DOCKER.nil?
-    config.vm.provision "docker" do |d|
+  config.vm.provision "docker" do |d|
       d.pull_images "futoase/docker-focuslight"
       d.run "futoase/docker-focuslight",
-        args: "-p 5125:5125"
-    end
+        args: "-p 80:80"
   end
 end
