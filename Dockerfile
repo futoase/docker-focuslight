@@ -60,5 +60,5 @@ RUN service nginx restart
 ADD ./startup.sh /root/startup.sh
 RUN chmod +x /root/startup.sh
 
-EXPOSE 5125
+EXPOSE 80
 CMD ["/root/startup.sh"]
