@@ -12,6 +12,8 @@ RUN wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 RUN curl -O http://rpms.famillecollet.com/RPM-GPG-KEY-remi; rpm --import RPM-GPG-KEY-remi
 RUN rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm
 
+RUN yum -y install --enablerepo=epel,remi pkgconfig glib2-devel gettext libxml2-devel pango-devel cairo-devel ipa-gothic-fonts
+
 # setup nginx repository
 ADD ./template/nginx.repo /etc/yum.repos.d/nginx.repo
 
