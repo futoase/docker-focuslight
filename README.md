@@ -18,4 +18,4 @@ How to use?
 LICENSE
 -------
 
-MIT
+[Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
